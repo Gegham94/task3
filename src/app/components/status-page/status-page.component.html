@@ -1,0 +1,20 @@
+<div class="table-container">
+
+  <p class="title">Title of students list page</p>
+
+    <div class="container-fluid">
+      <div class="row top-card">
+        <img src="../../../assets/icons/student-icon.png" class="logo" alt="Student icon">
+        <app-student-card class="col" [student]="studentsData[0]"></app-student-card>
+        <img src="../../../assets/icons/logo.png" class="logo" alt="Logo">
+      </div>
+    </div>
+
+    <div class="container list">
+      <div class="row">
+        <app-student-card class="col" *ngFor="let student of newStudentData | paginate: { itemsPerPage: count, currentPage: p }" [student]="student"></app-student-card>
+      </div>
+    </div>
+    <pagination-controls responsive="true" (pageChange)="p = $event"></pagination-controls>
+
+</div>

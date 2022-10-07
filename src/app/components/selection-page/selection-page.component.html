@@ -1,0 +1,39 @@
+<div class="selection-page-container">
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="row">
+        <div class="col d-grid">
+          <span class="section-label">Class</span>
+          <select class="custom-select mb-3 section-select" (change)="changeClass($event)" formControlName="className">
+            <option value="undefined" disabled selected class="placeholder-option">Choose Class</option>
+            <option *ngFor="let class of Class" [ngValue]="class">
+              {{class}}
+            </option>
+          </select>
+          <div class="invalid-feedback-text" *ngIf="isSubmitted && className?.invalid">
+            <sup>* </sup>Please provide Class name
+          </div>
+        </div>
+
+        <div class="col d-grid">
+          <span class="section-label">Section</span>
+          <select class="custom-select mb-3 section-select" (change)="changeSection($event)" formControlName="sectionName">
+            <option value="undefined" disabled selected class="placeholder-option">Choose Section</option>
+            <option *ngFor="let section of Section" [ngValue]="section">
+              {{section}}
+            </option>
+          </select>
+          <div class="invalid-feedback-text" *ngIf="isSubmitted && sectionName?.invalid">
+            <sup>* </sup>Please provide Section name
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block go-button">
+          GO
+        </button>
+      </div>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,47 @@
+.table-container {
+  background: linear-gradient(-45deg, #3a7dc9, #8ca9ca, #6222b6);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  .title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+  }
+  .logo{
+    max-height: 80px;
+    max-width: 100px;
+    min-height: 30px;
+    min-width: 30px;
+    margin: 50px;
+  }
+  .list{
+    min-height: 600px;
+  }
+  ::ng-deep {
+    a:not([href]):not([class]):hover {
+      border-radius: 5px;
+      background: #2c2e9996;
+    }
+    .ngx-pagination .pagination-previous, .pagination-next {
+      font-family: 'Roboto-lighter' !important;
+      color: rgba(0, 0, 0, 0.801) !important;
+      margin: 0 15px !important;
+      &:hover{
+        cursor: pointer !important;
+        color: rgb(0, 0, 0) !important;
+        border-radius: 5px !important;
+      }
+    }
+    .ngx-pagination .current,
+    .btn-info {
+      background: #2c2e9996 !important;
+      border: transparent !important;
+      border-radius: 20px !important;
+    }
+    .ngx-pagination .current:hover {
+      border-radius: 20px !important;
+      border: transparent !important;
+    }
+  }
+}

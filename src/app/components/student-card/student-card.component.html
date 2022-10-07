@@ -1,0 +1,12 @@
+<div class="card" [ngClass]="{'isReady': student.isReady, 'isAvailableForCall': student.isAvailableForCall}">
+  <div class="time">
+    <p>11:45</p>
+  </div>
+  <div class="text-name">
+    <div class="text-section">
+      <h1>{{student.name}}</h1>
+      <p>{{student.nid}}</p>
+    </div>
+    <img src="../../../assets/icons/student-icon.png" alt="Student icon">
+  </div>
+</div>
